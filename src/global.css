@@ -1,0 +1,16 @@
+@import "tailwindcss";
+/* @tailwind utilities; */
+
+:root {
+  --darkblue: #071c38;
+  --blue: #103058;
+  --lightblue: #204e81;
+  --paleblue: #4678aa;
+  --black: #000;
+  --white: #fff;
+  --red: #ff0000;
+}
+
+body {
+  background-color: var(--darkblue);
+}
