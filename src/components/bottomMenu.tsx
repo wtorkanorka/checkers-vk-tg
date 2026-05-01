@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import burgerIcon from "../../assets/burger-icon.svg";
-import profilePersonIcon from "../../assets/profile-person-icon.svg";
-import { useBottomMenuStore } from "../../store/store";
-import { Button } from "../button/button";
-import { NavBottomCreateLobbyContainer } from "../navBottomCreateLobbyContainer";
+import burgerIcon from "../assets/burger-icon.svg";
+import profilePersonIcon from "../assets/profile-person-icon.svg";
+
+import { useBottomMenuStore } from "../store/store";
+import { NavBottomCreateLobbyContainer } from "./navBottomCreateLobbyContainer";
 
 export const BottomMenu = () => {
   const { isButtonActive, setIsOpen } = useBottomMenuStore();
@@ -17,12 +17,15 @@ export const BottomMenu = () => {
 
         <button
           onClick={() => !isButtonActive && setIsOpen()}
-          className="flex justify-center h-[50px] w-[50px] rounded-[20px] translate-y-[-50%] bg-[var(--lightblue)]"
+          className="flex justify-center h-[50px] w-[50px] rounded-[20px] translate-y-[-50%] bg-[var(--lightblue)] shadow-2xs"
         >
           <p className="text-[var(--paleblue)] text-[30px] text-center">+</p>
         </button>
-
-        <Link to="/" className={"w-[25px] h-[25px] focus:animate-pulse"}>
+        {/* TODO: СДелать переход без id для открытия по умолчанию своего профлия */}
+        <Link
+          to="/profile/1"
+          className={"w-[25px] h-[25px] focus:animate-pulse"}
+        >
           <img
             src={profilePersonIcon}
             alt={profilePersonIcon}

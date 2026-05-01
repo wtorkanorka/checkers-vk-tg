@@ -1,6 +1,5 @@
 import { type ReactNode } from "react";
-import { BottomMenu } from "./components/bottomMenu/bottomMenu";
-import { NavBottomCreateLobbyContainer } from "./components/navBottomCreateLobbyContainer";
+import { BottomMenu } from "./components/bottomMenu";
 
 interface ILayout {
   children: ReactNode;

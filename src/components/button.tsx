@@ -3,19 +3,19 @@ import type { ReactNode } from "react";
 interface IButton {
   children: ReactNode;
   onClick?: () => void;
-  style?: string;
+  className?: string;
   disabled?: boolean;
 }
 
 export const Button = ({
   onClick,
-  style,
+  className,
   disabled = false,
   children,
 }: IButton) => {
   return (
     <button
-      className={style}
+      className={className}
       onClick={() => onClick && onClick()}
       disabled={disabled}
     >

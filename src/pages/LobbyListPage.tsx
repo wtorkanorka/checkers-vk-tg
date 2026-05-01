@@ -1,13 +1,43 @@
 import { LobbyContainer } from "../components/lobbyContainer";
 
-export const LobbyList = () => {
+export const LobbyListPage = () => {
   const mockData = [
-    { lobbyName: "лобби 1", playerRating: 253, profileImg: "" },
-    { lobbyName: "лобби 2", playerRating: 253, profileImg: "" },
-    { lobbyName: "Ночной дозор", playerRating: 1842, profileImg: "" },
-    { lobbyName: "Киберспортсмены", playerRating: 3100, profileImg: "" },
-    { lobbyName: "Уютный вечер", playerRating: 890, profileImg: "" },
-    { lobbyName: "Хардкорщики", playerRating: 2750, profileImg: "" },
+    {
+      lobbyName: "лобби 1",
+      playerRating: 253,
+      profileImg: "",
+      user: { name: "имя 11111111111111111111111111111111111" },
+    },
+    {
+      lobbyName: "лобби 2",
+      playerRating: 253,
+      profileImg: "",
+      user: { name: "имя 2222222222222222222222222222222222222" },
+    },
+    {
+      lobbyName: "Ночной дозор",
+      playerRating: 1842,
+      profileImg: "",
+      user: { name: "имя 33333333333333333333333333333333333" },
+    },
+    {
+      lobbyName: "Киберспортсмены",
+      playerRating: 3100,
+      profileImg: "",
+      user: { name: "имя 4" },
+    },
+    {
+      lobbyName: "Уютный вечер",
+      playerRating: 890,
+      profileImg: "",
+      user: { name: "имя 5" },
+    },
+    {
+      lobbyName: "Хардкорщики",
+      playerRating: 2750,
+      profileImg: "",
+      user: { name: "имя 6" },
+    },
   ];
 
   return (
@@ -39,6 +69,7 @@ export const LobbyList = () => {
             lobbyName={lobby.lobbyName}
             playerRating={lobby.playerRating}
             profileImg={lobby.profileImg}
+            user={lobby.user}
           />
         ))}
         {mockData.map((lobby, index) => (
@@ -48,6 +79,7 @@ export const LobbyList = () => {
             lobbyName={lobby.lobbyName}
             playerRating={lobby.playerRating}
             profileImg={lobby.profileImg}
+            user={lobby.user}
           />
         ))}
         {mockData.map((lobby, index) => (
@@ -57,6 +89,7 @@ export const LobbyList = () => {
             lobbyName={lobby.lobbyName}
             playerRating={lobby.playerRating}
             profileImg={lobby.profileImg}
+            user={lobby.user}
           />
         ))}
         {mockData.map((lobby, index) => (
@@ -66,6 +99,7 @@ export const LobbyList = () => {
             lobbyName={lobby.lobbyName}
             playerRating={lobby.playerRating}
             profileImg={lobby.profileImg}
+            user={lobby.user}
           />
         ))}
       </div>

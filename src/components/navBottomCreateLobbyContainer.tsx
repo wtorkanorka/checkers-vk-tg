@@ -1,5 +1,5 @@
 import { useBottomMenuStore } from "../store/store";
-import { Button } from "./button/button";
+import { Button } from "./button";
 import crossIcon from "../assets/cross.svg";
 import { useState } from "react";
 
@@ -74,7 +74,7 @@ export const NavBottomCreateLobbyContainer = () => {
       >
         <Button
           onClick={() => isButtonActive && handleCloseCreateLobbyContainer()}
-          style={
+          className={
             "ml-auto mt-[15px] mr-[15px] mb-[15px] w-[30px] h-[30px] hover:opacity-70 duration-200"
           }
         >

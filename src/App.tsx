@@ -1,18 +1,21 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./layout";
-import { LobbyList } from "./pages/LobbyList";
+
+import { ProfilePage } from "./pages/ProfilePage";
+import { LobbyListPage } from "./pages/LobbyListPage";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="App">
         <Layout>
           <Routes>
-            <Route path="/" Component={LobbyList} />
+            <Route path="/" Component={LobbyListPage} />
+            <Route path="/profile/:profileId" Component={ProfilePage} />
           </Routes>
         </Layout>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
