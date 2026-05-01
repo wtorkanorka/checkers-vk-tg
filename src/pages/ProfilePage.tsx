@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const ProfilePage = () => {
   // Пример данных пользователя
   const user = {
