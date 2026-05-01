@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./layout";
 
-import { ProfilePage } from "./pages/ProfilePage";
+import ProfilePage from "./pages/ProfilePage";
 import { LobbyListPage } from "./pages/LobbyListPage";
 
 function App() {
