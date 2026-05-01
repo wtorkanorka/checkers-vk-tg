@@ -2,7 +2,7 @@ import "./global.css";
 import App from "./App.tsx";
 import { createRoot } from "react-dom/client";
 
-import { init, miniApp, mainButton, shareURL } from "@telegram-apps/sdk";
+import { init, miniApp } from "@telegram-apps/sdk";
 
 const initializeTelegramSDK = async () => {
   try {
