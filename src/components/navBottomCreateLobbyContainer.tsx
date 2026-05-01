@@ -28,10 +28,12 @@ export const NavBottomCreateLobbyContainer = () => {
     if (gameMode === "oneVsOne") {
       setGameMode("singleDevice");
       setAccessLevel("onlyMe");
+      setLobbyNameError("");
       setCanComeIcSpectators(false);
     } else {
       setGameMode("oneVsOne");
       setAccessLevel("public");
+      setLobbyNameError("");
       setCanComeIcSpectators(true);
     }
   };
@@ -47,19 +49,18 @@ export const NavBottomCreateLobbyContainer = () => {
     setCanComeIcSpectators((state) => !state);
   };
   const handleCreateLobby = () => {
-    if (lobbyName === "") {
+    if (lobbyName === "" && accessLevel !== "onlyMe") {
       setLobbyNameError("Поле должно быть заполнено");
-      console.log(lobbyName, lobbyName === "");
+      console.log("Должно быть название");
       return;
-    } else {
-      const lobbySettings = {
-        name: lobbyName,
-        gameMode: gameMode,
-        accessLevel: accessLevel,
-        spectateMode: canComeIcSpectators,
-      };
-      console.log(lobbySettings);
     }
+    const lobbySettings = {
+      name: lobbyName,
+      gameMode: gameMode,
+      accessLevel: accessLevel,
+      spectateMode: canComeIcSpectators,
+    };
+    console.log(lobbySettings);
   };
   return (
     <>
